@@ -1,38 +1,115 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  font-family: "Raleway", sans-serif;
+  
+}
+
+header,footer{
+  padding:15px;
+  font-weight: 400;
+  font-weight: bold;
+  font-size: 20px;
+  font-style: normal;
+  background-color: #176B87;
+  color: #EEF5FF;
+}
+main{
+  margin-top: 10px;
+  flex: 1;
+  font-family: "Raleway", sans-serif;
+  padding: 20px;
+}
+
+.form{
+display: flex;
+justify-content: center;
+gap: 20px;
+padding: 10px 20px;
+}
+.inputbox{
+  border: 3px solid #176B87;
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  color: #176B87;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: "Raleway", sans-serif;
+  
+}
+.inputbox:focus{
+  border:3px solid #176B87;
+  outline: none;
+}
+.addbtn{
+  width: 50px;
+  color: #EEF5FF;
+  font-size: 18px;
+  background-color: #176B87;
+  border-radius: 5px;
+  border: 3px solid #176B87;
+}
+.listdiv{
+  padding: 0px 10px;
+}
+.listItem{
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #B4D4FF;
+  color: #176B87;
+  font-size: 18px;
+}
+.listEmpty{
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #176B87;
 }
 
-.App-link {
-  color: #61dafb;
+.taskName{
+  display: flex;
+  gap: 15px;
+  
+}
+.completed {
+  text-decoration: line-through;
+}
+.deletebtn{
+  color: #FF6666;
+  padding: 10px;
+  background-color: #FCAEAE;
+  font-weight: bold;
+  border-radius: 5px;
+  font-family: "Raleway", sans-serif;
+  border: 3px solid #FF6666;
+}
+.deletebtn:hover{
+  color: red;
+  border-color: red;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width:600px){
+  .listdiv{
+    display: flex;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+  .listItem{
+    align-items: center;
+    width: 500px;
   }
 }
